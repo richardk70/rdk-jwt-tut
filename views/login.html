@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Web Tokens w/ Vanilla JS</title>
+</head>
+<body>
+    <h1>Welcome to the app</h1>
+<p>Please login with email address and password.</p>
+<p class='message'>${msgExists ? `${msgExists}` : `` }</p>
+<form method='POST' action='/login'>
+    <label for="email">email:</label>
+    <input type='text' name='email' id="email" placeholder='enter email address'><br>
+    <label for="password">password:</label>
+    <input type='password' name='password' id="password" placeholder='enter password'><br>
+    <input type='submit' value='Login'>
+</form>
+<p>Don't have an account yet? <a href='/users/register'>Register</a></p>
+
+    <div id="token"></div>
+    <button id='btnToken'>get secret message</button>
+    <div id="result"></div>
+
+      <!-- <script src="../public/js/index.js"></script> -->
+</body>
+</html>

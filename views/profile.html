@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Web Tokens w/ Vanilla JS</title>
+</head>
+<body>
+    <h1>Profile page</h1>
+    <p class='message'>${msgExists ? `${msgExists}` : `` }</p>
+
+    <div id='username'>${name}</div>
+    <div id='email'>${email}</div>
+    <div id='token'>${token}</div>
+
+    <!-- <script>
+    function loadProfile() {}
+        // load token from localStorage
+        var token = localStorage.getItem('token');
+        // fetch the data from the URL
+        var url = 'http://localhost:3000/profile';
+        fetch(url, { headers: new Headers({ 'Authorization': 'Bearer ' + token}) })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch( err => console.log(err));
+
+    </script> -->
+</body>
+</html>

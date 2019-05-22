@@ -26,12 +26,13 @@ app.use(bodyParser.json());
 app.use(userRouter);
 
 // DB CONNECTION
-const URL = 'mongodb://localhost:27017/jwtdemo';
+const URL = process.env.MONGO_URI;
+const port = process.env.PORT;
 mongoose.connect(URL, {useNewUrlParser: true, useCreateIndex: true});
 
 // MIDDLEWARE
 // const jwtStrategy = require('./middleware/auth').strategy;
 
-app.listen(3000, () => {
-    console.log('Listening port 3000...');
+app.listen(port, () => {
+    console.log('Listening port ' + port);
 });

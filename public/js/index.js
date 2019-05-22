@@ -1,7 +1,6 @@
 // make the request to the login endpoint
 const btnLogin = document.getElementById('btnLogin');
 const btnToken = document.getElementById('btnToken');
-btnLogin.addEventListener('click', getToken);
 btnToken.addEventListener('click', getSecret);
 
 var emailEl = document.getElementById('email');

@@ -1,0 +1,11 @@
+Token strategy
+
+When you REGISTER, a token is generated and added to your schema. DONE
+
+When you LOGIN, it checks the username and password
+then returns that token,
+and saves it to your localStorage.
+
+Then, on pages that require a login (such as PROFILE),
+it loads it the token from localStorage,
+and if it matches the token in your profile, you can access that page
